@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Raid
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item (click)="goToBossPage()">Jefe</button>
+    <button ion-item (click)="goToGymPage()">Gym</button>
+    <ion-item>
+      <ion-label>Go</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="go"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lista completa</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-textarea rows="15"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="secondary"><ion-icon name="copy"></ion-icon></button>
+  </ion-fab>
+</ion-content>
