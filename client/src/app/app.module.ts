@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { BossPage } from '../pages/boss/boss';
 import { GymPage } from '../pages/gym/gym';
+import { PokemonSelectorComponent } from '../components/pokemon-selector/pokemon-selector';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     BossPage,
-    GymPage
+    GymPage,
+    PokemonSelectorComponent
   ],
   imports: [
     BrowserModule,

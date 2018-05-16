@@ -1,12 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the BossPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,7 +8,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class BossPage {
 
+  private callback: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.callback = navParams.get('callback');
   }
 
   ionViewDidLoad() {
@@ -24,6 +20,12 @@ export class BossPage {
 
   goBack() {
     this.navCtrl.pop();
+  }
+
+  onSelected(ev: any) {
+    this.callback(ev.name).then(() => {
+      this.navCtrl.pop();
+    });
   }
 
 }

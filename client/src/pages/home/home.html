@@ -8,7 +8,10 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item (click)="goToBossPage()">Jefe</button>
+    <button ion-item (click)="goToBossPage()">
+      Jefe
+      <ion-note item-end>{{ boss }}</ion-note>
+    </button>
     <button ion-item (click)="goToGymPage()">Gym</button>
     <ion-item>
       <ion-label>Go</ion-label>
