@@ -1,8 +1,9 @@
 <ion-searchbar (ionInput)="getPokemons($event)"></ion-searchbar>
+
 <ion-list no-lines>
   <ion-item *ngFor="let pk of pokemons" (click)="select(pk)">
     <ion-avatar item-start>
-      <img src="img/avatar-cher.png">
+      <img src="assets/imgs/pokemon/{{pk.image}}">
     </ion-avatar>
     <h2>{{ pk.name }}</h2>
   </ion-item>

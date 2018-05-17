@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Pokemon } from './pokemon.model';
+import { PokemonList } from './pokemon-list';
 
 @Component({
   selector: 'pokemon-selector',
@@ -17,11 +18,7 @@ export class PokemonSelectorComponent {
   }
 
   initializePokemons() {
-    this.pokemons = [
-      { name: 'Abra' },
-      { name: 'Absol' },
-      { name: 'Aerodactyl' }
-    ];
+    this.pokemons = PokemonList;
   }
 
   getPokemons(ev: any) {
