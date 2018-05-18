@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { BossPage } from '../pages/boss/boss';
 import { GymPage } from '../pages/gym/gym';
 import { PokemonSelectorComponent } from '../components/pokemon-selector/pokemon-selector';
+import { GymSelectorComponent } from '../components/gym-selector/gym-selector';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PokemonSelectorComponent } from '../components/pokemon-selector/pokemon
     HomePage,
     BossPage,
     GymPage,
-    PokemonSelectorComponent
+    PokemonSelectorComponent,
+    GymSelectorComponent
   ],
   imports: [
     BrowserModule,

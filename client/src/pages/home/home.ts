@@ -12,9 +12,9 @@ export class HomePage {
   now: Date = new Date();
   go: string = `${this.now.getHours()}:${('0' + this.now.getMinutes()).slice(-2)}`;
   boss: string;
+  gym: any;
 
   constructor(public navCtrl: NavController) {
-
   }
 
   goToBossPage() {
@@ -28,7 +28,13 @@ export class HomePage {
   }
 
   goToGymPage() {
-    this.navCtrl.push(GymPage);
+    const gymPageCallback = (_params) => {
+      return new Promise((resolve, reject) => {
+          this.gym = _params;
+          resolve();
+      });
+    }
+    this.navCtrl.push(GymPage, { callback: gymPageCallback });
   }
 
 }

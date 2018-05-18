@@ -12,7 +12,10 @@
       Jefe
       <ion-note item-end>{{ boss }}</ion-note>
     </button>
-    <button ion-item (click)="goToGymPage()">Gym</button>
+    <button ion-item (click)="goToGymPage()">
+      Gym
+      <ion-note item-end>{{ gym?.shortName }}</ion-note>
+    </button>
     <ion-item>
       <ion-label>Go</ion-label>
       <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="go"></ion-datetime>
