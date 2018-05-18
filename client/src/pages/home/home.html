@@ -18,17 +18,17 @@
     </button>
     <ion-item>
       <ion-label>Go</ion-label>
-      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="go"></ion-datetime>
+      <ion-datetime displayFormat="H:mm" pickerFormat="H mm" [(ngModel)]="go" (ionChange)="onParamChange($event)"></ion-datetime>
     </ion-item>
     <ion-item>
       <ion-label>Lista completa</ion-label>
-      <ion-toggle checked="false"></ion-toggle>
+      <ion-toggle [(ngModel)]="fullList" (ionChange)="onParamChange($event)"></ion-toggle>
     </ion-item>
     <ion-item>
-      <ion-textarea rows="15"></ion-textarea>
+      <ion-textarea rows="15" [(ngModel)]="raidList"></ion-textarea>
     </ion-item>
   </ion-list>
-  <ion-fab right bottom>
-    <button ion-fab color="secondary"><ion-icon name="copy"></ion-icon></button>
+  <ion-fab right bottom *ngIf="raidList">
+    <button ion-fab color="secondary" ngxClipboard [cbContent]="raidList" (cbOnSuccess)="copySuccess()"><ion-icon name="copy"></ion-icon></button>
   </ion-fab>
 </ion-content>
