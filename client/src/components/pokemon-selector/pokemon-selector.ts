@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, ViewChild, AfterViewInit } from '@angular/core';
 import { Pokemon } from './pokemon.model';
 import { PokemonList } from './pokemon-list';
 
@@ -6,15 +6,23 @@ import { PokemonList } from './pokemon-list';
   selector: 'pokemon-selector',
   templateUrl: 'pokemon-selector.html'
 })
-export class PokemonSelectorComponent {
+export class PokemonSelectorComponent implements AfterViewInit {
 
   searchQuery: string;
   pokemons: Pokemon[];
 
   @Output() onSelected = new EventEmitter<any>();
 
+  @ViewChild('searchBar') searchBar;
+
   constructor() {
     this.initializePokemons();
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.searchBar.setFocus();
+    }, 1200);
   }
 
   initializePokemons() {
