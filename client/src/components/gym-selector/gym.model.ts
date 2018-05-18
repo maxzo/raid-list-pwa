@@ -3,4 +3,5 @@ export class Gym {
   shortName: string;
   coordenates: string;
   address: string;
+  imageUrl: string;
 }
