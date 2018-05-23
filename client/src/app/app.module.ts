@@ -9,22 +9,20 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { BossPage } from '../pages/boss/boss';
 import { GymPage } from '../pages/gym/gym';
-import { PokemonSelectorComponent } from '../components/pokemon-selector/pokemon-selector';
-import { GymSelectorComponent } from '../components/gym-selector/gym-selector';
+import { BossPageModule } from '../pages/boss/boss.module';
+import { GymPageModule } from '../pages/gym/gym.module';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    BossPage,
-    GymPage,
-    PokemonSelectorComponent,
-    GymSelectorComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ClipboardModule
+    ClipboardModule,
+    BossPageModule,
+    GymPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
