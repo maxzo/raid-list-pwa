@@ -65,7 +65,7 @@ export class HomePage {
     let toast = this.toastCtrl.create({
       message: 'Copiado',
       duration: 1000,
-      position: 'bottom'
+      position: 'top'
     });
 
     toast.present();
