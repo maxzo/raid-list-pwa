@@ -11,6 +11,8 @@ export class HomePage {
 
   now: Date = new Date();
   go: string = `${this.now.getHours()}:${('0' + this.now.getMinutes()).slice(-2)}`;
+  doneText: string = 'Aceptar';
+  cancelText: string = 'Cancelar';
   boss: string = '';
   gym: any;
   fullList: boolean = false;

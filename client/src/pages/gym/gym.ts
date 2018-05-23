@@ -15,7 +15,6 @@ export class GymPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad GymPage');
   }
 
   goBack() {

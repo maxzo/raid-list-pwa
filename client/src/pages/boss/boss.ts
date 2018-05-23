@@ -15,7 +15,6 @@ export class BossPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BossPage');
   }
 
   goBack() {

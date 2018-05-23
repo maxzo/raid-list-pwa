@@ -10,6 +10,7 @@ export class GymSelectorComponent {
 
   searchQuery: string;
   gyms: Gym[];
+  searchPlaceholder: string = 'Buscar';
 
   @Output() onSelected = new EventEmitter<any>();
 

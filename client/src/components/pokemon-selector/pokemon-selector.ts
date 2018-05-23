@@ -10,6 +10,7 @@ export class PokemonSelectorComponent implements AfterViewInit {
 
   searchQuery: string;
   pokemons: Pokemon[];
+  searchPlaceholder: string = 'Buscar';
 
   @Output() onSelected = new EventEmitter<any>();
 

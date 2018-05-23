@@ -18,7 +18,7 @@
     </button>
     <ion-item>
       <ion-label>Go</ion-label>
-      <ion-datetime displayFormat="H:mm" pickerFormat="H mm" [(ngModel)]="go" (ionChange)="onParamChange($event)"></ion-datetime>
+      <ion-datetime displayFormat="H:mm" pickerFormat="H mm" [(ngModel)]="go" (ionChange)="onParamChange($event)" [doneText]="doneText" [cancelText]="cancelText"></ion-datetime>
     </ion-item>
     <ion-item>
       <ion-label>Lista completa</ion-label>
